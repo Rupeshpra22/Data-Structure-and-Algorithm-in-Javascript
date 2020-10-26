@@ -18,6 +18,8 @@ var arr = [7, 10, 4, 10, 6, 5, 2]
 //     }
 // }
 
+//Time Complexity: O(n)
+//Space Complexity: O(1)
 leadersInArray = (arr) =>{
     var curr = arr[arr.length-1];
     console.log(curr)
