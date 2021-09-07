@@ -1,24 +1,21 @@
-var inputArray = [2,1,3,5,4];
-var size = 5;
+var arr = [1,4,5,3,2];
 
-function bubbleSort(inputArray, size){
-    for(var i=0;i<size-1;i++){
-        var swapped = false;
-        for(var j=0;j<size-i-1;j++){
-            if(inputArray[j]>inputArray[j+1]){
-                var temp = inputArray[j];
-                inputArray[j] = inputArray[j+1];
-                inputArray[j+1] = temp;
+let bubbleSort = (arr) => {
+    for(let i=0;i<arr.length-1;i++){
+        let swapped = false;
+        for(let j=0;j<arr.length - i - 1;j++){
+            if(arr[j]>arr[j+1]){
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                swapped = true;
             }
-            swapped = true;
         }
-        if(swapped == false){
-            break;
+
+        if(swapped === false){
+            return arr;
         }
     }
 }
 
-bubbleSort(inputArray, size);
-for(var z=0;z<size;z++){
-    console.log(inputArray[z]);
-}
+console.log(bubbleSort(arr))
