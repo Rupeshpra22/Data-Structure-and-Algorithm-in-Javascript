@@ -26,7 +26,9 @@ class LinkedList {
         //Suppose if initially there is some node, so we are basically creating a new node and making that particluar new
         //node as head as we are inserting at the beginning and the next of inserted node at the beggining will 
         //points to the previous head and that is why new Node(data, this.head);
+        console.log(this.head);
         this.head = new Node(data, this.head);
+        console.log("after insert", this.head)
         this.size++;
     }
 
@@ -36,6 +38,8 @@ class LinkedList {
         let node = new Node(data);
         if (this.head == null) {
             this.head = node;
+            this.size++;
+            return;
         }
         let curr = this.head;
         while (curr.next != null) {
@@ -127,12 +131,15 @@ class LinkedList {
 }
 
 const linkedlist = new LinkedList();
-linkedlist.InsertAtBeginning(100);
-linkedlist.InsertAtBeginning(200);
-linkedlist.InsertAtBeginning(300);
+//console.log(linkedlist)
+//linkedlist.InsertAtBeginning(100);
+//console.log(linkedlist)
+//linkedlist.InsertAtBeginning(200);
+//linkedlist.InsertAtBeginning(300);
 linkedlist.InsertAtEnd(400);
-linkedlist.insertAt(250, 2);
-linkedlist.PrintLinkedList();
-linkedlist.getAt(2);
-linkedlist.removeAt(3);
+linkedlist.InsertAtEnd(500);
+//linkedlist.insertAt(250, 2);
+//linkedlist.PrintLinkedList();
+//linkedlist.getAt(2);
+//linkedlist.removeAt(3);
 console.log(linkedlist)
