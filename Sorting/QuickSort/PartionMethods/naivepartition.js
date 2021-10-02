@@ -1,7 +1,7 @@
 var arr = [5,13,6,9,12,11,8]
 var l= 0;
 var h = arr.length-1;
-var p = 6
+var p = 9
 
 //Time Complexity: O(n)
 //Space Complexity: O(n)
@@ -27,12 +27,14 @@ function naivePartitionMethod(arr,l,h,p){
     }
 
     //Copying the temp array in the original arr array
-    for(var z=l;z<h;z++){
-        arr[z] = temp[z];
-    }
+    // for(var z=l;z<h;z++){
+    //     arr[z] = temp[z];
+    // }
+
+    return temp;
 }
 
-naivePartitionMethod(arr,l,h,p);
-for(var m=l;m<=h;m++){
-    console.log(arr[m]);
-}
+console.log(naivePartitionMethod(arr,l,h,p));
+// for(var m=l;m<=h;m++){
+//     console.log(arr[m]);
+// }
