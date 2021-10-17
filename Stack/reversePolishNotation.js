@@ -1,3 +1,5 @@
+//Also knowns as postfix evaluation
+
 let tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
 
 let evalRPN = (tokens) =>{
