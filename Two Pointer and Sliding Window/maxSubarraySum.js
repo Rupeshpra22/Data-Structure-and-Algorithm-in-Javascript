@@ -10,7 +10,7 @@ const maximumSubArray = (arr, k) =>{
     max_sum = Math.max(max_sum, curr_sum);
 
     for(let j=k;j<arr.length;j++){
-        curr_sum = curr_sum+arr[j] - arr[j - k];
+        curr_sum = curr_sum + arr[j] - arr[j - k];
         max_sum = Math.max(max_sum, curr_sum);
     }
     return max_sum
